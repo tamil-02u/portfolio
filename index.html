@@ -1,0 +1,1012 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tamilselvan U | Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* =========================
+           GENERAL STYLING
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0b1020;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           NAVIGATION BAR
+        ========================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(11, 16, 32, 0.90);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #00e5ff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00e5ff;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+
+            background:
+                radial-gradient(circle at top right, #123b5d 0%, transparent 35%),
+                radial-gradient(circle at bottom left, #18204d 0%, transparent 35%),
+                #0b1020;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #00e5ff;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: 500;
+            color: #b7c4d6;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #aeb9ca;
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 13px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #00e5ff;
+            color: #071018;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,229,255,0.3);
+        }
+
+        .btn-outline {
+            border: 1px solid #00e5ff;
+            color: #00e5ff;
+        }
+
+        .btn-outline:hover {
+            background: #00e5ff;
+            color: #071018;
+        }
+
+        /* =========================
+           COMMON SECTION
+        ========================== */
+
+        section {
+            padding: 90px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #ffffff;
+        }
+
+        .section-title span {
+            color: #00e5ff;
+        }
+
+        .section-title p {
+            color: #8f9caf;
+            margin-top: 8px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: #b6c0d0;
+            margin-bottom: 15px;
+        }
+
+        .about-card {
+            padding: 30px;
+            border-radius: 20px;
+            background: #11182b;
+            border: 1px solid rgba(0,229,255,0.15);
+        }
+
+        .about-card div {
+            margin-bottom: 15px;
+        }
+
+        .about-card strong {
+            color: #00e5ff;
+        }
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #11182b;
+            padding: 30px 20px;
+            border-radius: 18px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            border-color: #00e5ff;
+        }
+
+        .skill-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            font-size: 14px;
+            color: #9da9bb;
+        }
+
+        /* =========================
+           CERTIFICATIONS
+        ========================== */
+
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .cert-card {
+            background: #11182b;
+            padding: 28px;
+            border-radius: 18px;
+            border-left: 4px solid #00e5ff;
+            transition: 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .cert-card p {
+            color: #a7b2c2;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education-box {
+            max-width: 800px;
+            margin: auto;
+            background: #11182b;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(0,229,255,0.15);
+        }
+
+        .education-box h3 {
+            color: #00e5ff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .education-box p {
+            color: #b4bfce;
+            margin: 7px 0;
+        }
+
+        /* =========================
+           INTERESTS
+        ========================== */
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .interest-card {
+            padding: 35px;
+            background: linear-gradient(135deg, #11182b, #151e35);
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .interest-card:hover {
+            transform: scale(1.03);
+        }
+
+        .interest-card h3 {
+            color: #00e5ff;
+            margin-bottom: 10px;
+        }
+
+        .interest-card p {
+            color: #aeb9c8;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-box {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+            background: #11182b;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .contact-box p {
+            color: #aeb9c8;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #080c18;
+            color: #8290a5;
+            font-size: 14px;
+        }
+
+        /* =========================
+           SCROLL TOP BUTTON
+        ========================== */
+
+        #topBtn {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #00e5ff;
+            color: #071018;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media(max-width: 900px) {
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 650px) {
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #0b1020;
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills-grid,
+            .certifications,
+            .interest-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<header>
+    <nav>
+
+        <div class="logo">Tamilselvan.</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    </nav>
+</header>
+
+
+<!-- =========================
+     HOME
+========================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Hello, I'm <span>Tamilselvan U</span></h1>
+
+        <h2>
+            ECE Student | Java & Python Learner | Aspiring IT Professional
+        </h2>
+
+        <p>
+            A passionate 3rd-year Electronics and Communication Engineering
+            student interested in Information Technology, Web Development
+            and Big Data Analytics.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#about" class="btn btn-primary">
+                Explore My Portfolio
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About <span>Me</span></h2>
+            <p>Get to know more about my academic journey</p>
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-text">
+
+                <p>
+                    I am <strong>Tamilselvan U</strong>, currently pursuing
+                    my 3rd year of Electronics and Communication Engineering
+                    at Sri Sairam Engineering College.
+                </p>
+
+                <p>
+                    Along with my engineering studies, I have developed a
+                    strong interest in Information Technology and software
+                    development.
+                </p>
+
+                <p>
+                    I have completed and received certifications from
+                    <strong>5+ NPTEL examinations</strong>. I have also
+                    developed intermediate-level knowledge in
+                    <strong>Java and Python</strong>.
+                </p>
+
+                <p>
+                    My primary areas of interest are
+                    <strong>Web Development</strong> and
+                    <strong>Big Data Analytics</strong>.
+                </p>
+
+                <p>
+                    I continuously focus on improving my technical knowledge,
+                    maintaining good academic performance, and developing
+                    professional discipline and decency.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div>
+                    <strong>Name:</strong> Tamilselvan U
+                </div>
+
+                <div>
+                    <strong>Course:</strong>
+                    Electronics and Communication Engineering
+                </div>
+
+                <div>
+                    <strong>Year:</strong> 3rd Year
+                </div>
+
+                <div>
+                    <strong>College:</strong>
+                    Sri Sairam Engineering College
+                </div>
+
+                <div>
+                    <strong>Programming:</strong>
+                    Java, Python
+                </div>
+
+                <div>
+                    <strong>Interests:</strong>
+                    Web Development, Big Data Analytics
+                </div>
+
+                <div>
+                    <strong>NPTEL:</strong>
+                    5+ Certified Courses
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================== -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Skills</span></h2>
+
+            <p>Technologies and areas I am developing</p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <div class="skill-icon">☕</div>
+
+                <h3>Java</h3>
+
+                <p>
+                    Intermediate knowledge of Java programming,
+                    OOP concepts and problem solving.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">🐍</div>
+
+                <h3>Python</h3>
+
+                <p>
+                    Intermediate Python knowledge with interest
+                    in data-oriented applications.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">🌐</div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Interested in developing responsive and
+                    interactive websites.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">📊</div>
+
+                <h3>Big Data Analytics</h3>
+
+                <p>
+                    Interested in data processing, analytics
+                    and large-scale data technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATIONS
+========================== -->
+
+<section id="certifications">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Certifications</span></h2>
+
+            <p>Continuous learning and professional development</p>
+
+        </div>
+
+
+        <div class="certifications">
+
+            <div class="cert-card">
+
+                <h3>🏆 NPTEL Certified</h3>
+
+                <p>
+                    Successfully completed and obtained certifications
+                    from more than five NPTEL examinations.
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>💻 Java Programming</h3>
+
+                <p>
+                    Developed intermediate-level knowledge in Java
+                    programming and object-oriented concepts.
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>🐍 Python Programming</h3>
+
+                <p>
+                    Learned Python programming fundamentals and
+                    intermediate programming concepts.
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>📚 Academic Excellence</h3>
+
+                <p>
+                    Maintaining good CGPA and PGPA scores throughout
+                    the academic journey.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================== -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Education</span></h2>
+
+            <p>Academic background</p>
+
+        </div>
+
+
+        <div class="education-box">
+
+            <h3>Sri Sairam Engineering College</h3>
+
+            <p>
+                Bachelor of Engineering / Technology
+            </p>
+
+            <p>
+                Electronics and Communication Engineering
+            </p>
+
+            <p>
+                Currently pursuing 3rd Year
+            </p>
+
+            <p>
+                Academic Performance: Good CGPA & PGPA
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTERESTS
+========================== -->
+
+<section id="interests">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Areas of <span>Interest</span></h2>
+
+            <p>Technology domains I want to explore</p>
+
+        </div>
+
+
+        <div class="interest-grid">
+
+            <div class="interest-card">
+
+                <h3>🌐 Web Development</h3>
+
+                <p>
+                    Interested in creating modern, responsive and
+                    user-friendly websites and web applications.
+                </p>
+
+            </div>
+
+
+            <div class="interest-card">
+
+                <h3>📊 Big Data Analytics</h3>
+
+                <p>
+                    Interested in understanding large datasets,
+                    extracting useful insights and developing
+                    data-driven solutions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact <span>Me</span></h2>
+
+            <p>Let's connect and build something meaningful</p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <p>
+                I am interested in opportunities related to
+                Web Development, Java, Python and Big Data Analytics.
+            </p>
+
+            <a href="mailto:your-email@example.com"
+               class="btn btn-primary">
+                Send Me an Email
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <p>
+        © 2026 Tamilselvan U | ECE Student | Aspiring IT Professional
+    </p>
+
+</footer>
+
+
+<!-- SCROLL TOP BUTTON -->
+
+<button id="topBtn" onclick="scrollToTop()">↑</button>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+    /* Mobile Navigation */
+
+    function toggleMenu() {
+
+        const nav = document.getElementById("navLinks");
+
+        nav.classList.toggle("active");
+
+    }
+
+
+    /* Close mobile menu after clicking a link */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document.getElementById("navLinks")
+                    .classList.remove("active");
+
+        });
+
+    });
+
+
+    /* Scroll to Top Button */
+
+    const topBtn = document.getElementById("topBtn");
+
+    window.addEventListener("scroll", function() {
+
+        if (window.scrollY > 300) {
+
+            topBtn.style.display = "block";
+
+        } else {
+
+            topBtn.style.display = "none";
+
+        }
+
+    });
+
+
+    function scrollToTop() {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    }
+
+
+    /* Simple welcome message */
+
+    window.addEventListener("load", function() {
+
+        console.log(
+            "Welcome to Tamilselvan U's Portfolio!"
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
+```
